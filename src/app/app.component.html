@@ -1,4 +1,19 @@
-<h1>
-  {{title}}
-  <banners></banners>
-</h1>
+<ul class="nav nav-pills">
+  <li routerLinkActive="active">
+    <a routerLink="">Home</a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/sorteios">Sotereios</a>
+  </li>
+  <li routerLinkActive="active">
+    <a [routerLink]='["/sorteios", meuId.value]'>Sotereio X</a>
+  </li>
+  <li routerLinkActive="active">
+    <a routerLink="/about-us">Sobre a empresa</a>
+  </li>
+</ul>
+
+<div class="container">
+  <router-outlet></router-outlet>
+  <input #meuId>
+</div>

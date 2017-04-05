@@ -1,0 +1,13 @@
+<router-outlet></router-outlet>
+
+<p>
+  sortition works!
+</p>
+
+<ul>
+  <li *ngFor="let sortition of sortitions">
+    <a [routerLink]="['/sorteios', sortition.id]"> {{ sortition.edition }}</a>
+  </li>
+
+  <button (click)="redirect()">Navegar</button>
+</ul>
