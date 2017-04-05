@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'banners',
+  selector: 'app-banners',
   templateUrl: 'banners.html',
   styleUrls: ['style.css']
 })

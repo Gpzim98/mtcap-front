@@ -1,0 +1,11 @@
+#header-top {
+    background-color: #f6d003;
+}
+
+#header-top p {
+    margin: 5px;
+    font-size: 9pt;
+    text-shadow: 1px 1px 2px #000;
+    display: block;
+    color: #fff;
+}
