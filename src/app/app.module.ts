@@ -19,6 +19,7 @@ import { PublicityComponent } from './publicity/publicity.component';
 import { NextSortitionComponent } from './next-sortition/next-sortition.component';
 import { ResultsComponent } from './results/results.component';
 import { ContactComponent } from './contact/contact.component';
+import { BannersService } from './home/banners/banners.service';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     SortitionModule,
   ],
+  providers: [ BannersService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

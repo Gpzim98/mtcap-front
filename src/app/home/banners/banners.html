@@ -8,19 +8,12 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="..." alt="...">
+    <div *ngFor="let image of banner?.images; let index = index" class="item" [class.active]="index == 0">
+      <img src="{{image.image}}" alt="{{image.description}}">
       <div class="carousel-caption">
-        ...
+        {{image.description}}
       </div>
     </div>
-    <div class="item">
-      <img src="..." alt="...">
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    ...
   </div>
 
   <!-- Controls -->
@@ -32,4 +25,4 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>>
+</div>
