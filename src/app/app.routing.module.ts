@@ -1,3 +1,4 @@
+import { InliveComponent } from './inlive/inlive.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResultsComponent } from './results/results.component';
 import { NextSortitionComponent } from './next-sortition/next-sortition.component';
@@ -10,6 +11,7 @@ import { PublicityComponent } from './publicity/publicity.component';
 import { HomeComponent } from './home/home.component';
 import { SortitionComponent } from './sortition/sortition.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SellingPointComponent } from './selling-point/selling-point.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +23,9 @@ const appRoutes: Routes = [
   { path: 'proximo-sorteio', component: NextSortitionComponent },
   { path: 'resultados', component: ResultsComponent },
   { path: 'contato', component: ContactComponent },
+  { path: 'pontos-de-venda', component: SellingPointComponent },
+  { path: 'sorteio-ao-vivo', component: InliveComponent },
+
 ];
 
 @NgModule({

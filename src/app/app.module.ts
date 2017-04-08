@@ -20,6 +20,8 @@ import { NextSortitionComponent } from './next-sortition/next-sortition.componen
 import { ResultsComponent } from './results/results.component';
 import { ContactComponent } from './contact/contact.component';
 import { BannersService } from './home/banners/banners.service';
+import { SellingPointComponent } from './selling-point/selling-point.component';
+import { InliveComponent } from './inlive/inlive.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { BannersService } from './home/banners/banners.service';
     NextSortitionComponent,
     ResultsComponent,
     ContactComponent,
+    SellingPointComponent,
+    InliveComponent,
   ],
   imports: [
     BrowserModule,

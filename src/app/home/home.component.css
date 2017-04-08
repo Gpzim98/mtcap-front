@@ -1,0 +1,39 @@
+#next-sortition {
+    background-color: #f6d003;
+    min-height: 300px;
+    height: auto;
+}
+
+#next-sortition a, #who-won a {
+    text-decoration: none;
+}
+
+#who-won {
+    background-color: #c42b30;
+    min-height: 300px;
+    height: auto;
+}
+
+h1, h3, p {
+    color: #fff;
+    text-shadow: 1px 1px 7px rgba(63, 107, 169, 0.3);
+}
+
+#next-sortition h1, #who-won h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#next-sortition-date {
+    font-size: 2em;
+}
+
+#publicity {
+    background-color: #5fb8ef;
+    min-height: 300px;
+    height: auto;
+}
+
+#publicity a {
+    text-decoration: none;
+}
