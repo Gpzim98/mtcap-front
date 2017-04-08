@@ -2,3 +2,8 @@
 body {
     background-color: #272426;
 }
+
+.content {
+    background-image: url('/assets/img/bg-topo-menu.png');
+    padding: 40px;
+}
