@@ -4,6 +4,8 @@ body {
 }
 
 .content {
+    margin: 10px 0 10px 0;
     background-image: url('/assets/img/bg-topo-menu.png');
     padding: 40px;
+    min-height: 300px;
 }
