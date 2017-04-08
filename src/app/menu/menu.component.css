@@ -1,5 +1,10 @@
 #navbar-topo {
-    /*background-image: url(img/bg-menu.png);*/
     margin-bottom: 0px;
     border: none;
+    background-image: url('/assets/img/bg-menu.png');
+}
+
+#menu-top {
+    background-color: #f6d003;
+    /*background-image: url('/assets/img/bg-menu.png');*/
 }
