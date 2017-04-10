@@ -1,3 +1,47 @@
-<p>
-  next-sortition works!
-</p>
+<div class="row content">
+
+<h1>Próximo sorteio</h1>
+
+<div class="col-md-4">
+
+  <div class="sortition">
+    {{nextSortition?.edition_number}}ª Edição -	{{nextSortition?.sortition_date| date: 'dd/MM/yyyy'}}
+
+  </div>
+
+  <h2>Valor: R$ {{nextSortition?.ticket_price}}</h2>
+
+  <img src="{{nextSortition?.banner}}" 
+    alt="Nome do sorteio" width="100%">
+    <br>
+  <p><strong>Todas as imagens são meramente ilustrativas.</strong></p>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Para Mais Informações:</h3>
+        (65) 3055-1100 <br>
+        (65) 3055-0660 <br>
+        mtcap@mtcap.com.br <br>
+    </div>
+  </div>
+  
+
+</div>
+
+<div class="col-md-8">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe  width="560" height="300" [src]="transform(nextSortition?.video_url)" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <h3>Prêmios</h3>
+  <div class="list-group">
+    <a class="list-group-item disabled">
+      Muitos prêmios para você
+    </a>
+    <a *ngFor="let prize of nextSortition?.prizes"  
+         class="list-group-item">
+        <strong>{{ prize.order }}º Prêmio:</strong> {{ prize.description }}</a>
+  </div>
+</div>
+
+</div>
