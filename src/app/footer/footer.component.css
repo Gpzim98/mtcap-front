@@ -1,3 +1,12 @@
 footer {
     background-image: url('/assets/img/bg-topo-menu.png');
+    padding: 20px;
+}
+
+
+footer ul {
+    list-style-type: none;
+    text-align: left;
+    float: left;
+    padding-left: 0;
 }

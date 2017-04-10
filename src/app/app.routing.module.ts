@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { SortitionComponent } from './sortition/sortition.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SellingPointComponent } from './selling-point/selling-point.component';
+import { TitleCapitalizationComponent } from './title-capitalization/title-capitalization.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'contato', component: ContactComponent },
   { path: 'pontos-de-venda', component: SellingPointComponent },
   { path: 'sorteio-ao-vivo', component: InliveComponent },
+  { path: 'titulo-capitalizacao', component: TitleCapitalizationComponent },
 
 ];
 

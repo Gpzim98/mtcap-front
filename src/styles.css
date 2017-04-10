@@ -9,3 +9,7 @@ body {
     padding: 40px;
     min-height: 300px;
 }
+
+.container-fluid {
+    padding: 0;
+}

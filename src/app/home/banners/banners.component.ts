@@ -10,13 +10,13 @@ import { BannersService } from './banners.service';
 export class BannersComponent implements OnInit {
   banner: any;
 
-  constructor(private bannersService: BannersService) { 
-    this.constructBanners();
+  constructor(private bannersService: BannersService) { }
+
+  ngOnInit() {
+      this.constructBanners();
   }
 
-  ngOnInit() {}
-
-  constructBanners(){
+  constructBanners() {
     this.bannersService.getImagesList()
     .subscribe(
         data => {

@@ -20,8 +20,11 @@ import { NextSortitionComponent } from './next-sortition/next-sortition.componen
 import { ResultsComponent } from './results/results.component';
 import { ContactComponent } from './contact/contact.component';
 import { BannersService } from './home/banners/banners.service';
+import { FooterService } from './footer/footer.service';
+import { HomeService } from './home/home.service';
 import { SellingPointComponent } from './selling-point/selling-point.component';
 import { InliveComponent } from './inlive/inlive.component';
+import { TitleCapitalizationComponent } from './title-capitalization/title-capitalization.component';
 
 
 @NgModule({
@@ -42,6 +45,7 @@ import { InliveComponent } from './inlive/inlive.component';
     ContactComponent,
     SellingPointComponent,
     InliveComponent,
+    TitleCapitalizationComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,7 @@ import { InliveComponent } from './inlive/inlive.component';
     AppRoutingModule,
     SortitionModule,
   ],
-  providers: [ BannersService ],
+  providers: [ BannersService, HomeService, FooterService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
