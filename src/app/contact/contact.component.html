@@ -5,21 +5,31 @@
     <form>
         <div class="form-group">
           <label for="nameInput">Nome</label>
-          <input type="email" class="form-control" id="nameInput" placeholder="Nome">
+          <input type="text" class="form-control" id="nameInput" placeholder="Nome" 
+          name="name" [(ngModel)]="contact.name">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" 
+          name="email" [(ngModel)]="contact.email">
         </div>
         <div class="form-group">
           <label for="subjectInput">Assunto</label>
-          <input type="text" class="form-control" id="subjectInput" placeholder="Assunto">
+          <input type="text" class="form-control" id="subjectInput" placeholder="Assunto" 
+          name="text" [(ngModel)]="contact.subject">
         </div>
         <div class="form-group">
           <label for="messageInput">Mensagem</label><br>
-          <textarea rows="10" class="form-control" placeholder="Mensagem" id="messageInput"></textarea>
+          <textarea rows="10" class="form-control" placeholder="Mensagem" id="messageInput" 
+          name="message" [(ngModel)]="contact.message"></textarea>
         </div>
-        <button type="submit" class="btn btn-info">Enviar</button>
+        <button type="submit" class="btn btn-info"(click)="sendMessage()">Enviar</button>
+        <br>
+        <div class="alert alert-info" role="alert" [(hidden)]="!messageSent">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Sucesso!</span>
+          Sua mensagem foi enviada!
+        </div>
     </form>
   </div>
 

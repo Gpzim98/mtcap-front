@@ -21,6 +21,7 @@ import { ResultsComponent } from './results/results.component';
 import { ContactComponent } from './contact/contact.component';
 import { BannersService } from './home/banners/banners.service';
 import { FooterService } from './footer/footer.service';
+import { ContactService } from './contact/contact.service';
 import { HomeService } from './home/home.service';
 import { SellingPointComponent } from './selling-point/selling-point.component';
 import { InliveComponent } from './inlive/inlive.component';
@@ -54,7 +55,7 @@ import { TitleCapitalizationComponent } from './title-capitalization/title-capit
     AppRoutingModule,
     SortitionModule,
   ],
-  providers: [ BannersService, HomeService, FooterService ],
+  providers: [ BannersService, HomeService, FooterService, ContactService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
