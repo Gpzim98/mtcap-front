@@ -13,3 +13,8 @@ body {
 .container-fluid {
     padding: 0;
 }
+
+#navbar-topo .navbar-nav li>a {
+    font-weight: bold;
+    color: #000;
+}

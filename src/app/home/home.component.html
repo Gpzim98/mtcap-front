@@ -1,7 +1,7 @@
 <app-banners></app-banners>
 <div class="container">
 	<div class="row">
-		
+		<h2 hidden>Com os títulos da MTCAP sua sorte é certa!</h2>
 		<div class="col-md-6 square-block" id="next-sortition">
 			<h3 class="text-center">Fique ligado</h3>
 			<a routerLink="/proximo-sorteio"><h1 class="text-center">Próximo sorteio</h1></a><br>
@@ -15,7 +15,7 @@
 
 		<div class="col-md-6 square-block" id="who-won">
 			<h3 class="text-center">Quer saber se ganhou?</h3>
-			<a routerLink="/resultados"><h1 class="text-center">Confira os resultados dos sorteios</h1></a><br>
+			<a routerLink="/resultados"><h2 class="text-center">Confira os resultados dos sorteios</h2></a><br>
 			<p class="text-center">
 				<a routerLink="/resultados" class="btn btn-info btn-lg"> Conferir resultados</a>
 			</p>
@@ -31,36 +31,53 @@
 		</div>
 
 		<div class="col-md-6 square-block" id="publicity">
-			<div class="col-md-6">
-				<a routerLink="/publicidade"><h3 class="text-center">Todos os nossos vídeos</h3>
-					<p class="text-center">
-						<img src="/assets/img/youtube.png" alt="Videos do youtube">
-					</p>
-					<p class="text-center">				
-						<span>Acesse nosso canal do youtube</span>
-					</p>
-				</a>
+			<div class="row">
+				<div class="col-md-6">
+					<a routerLink="/publicidade"><h3 class="text-center">Todos os nossos vídeos</h3>
+						<p class="text-center">
+							<img src="/assets/img/monitor.png" alt="Videos do youtube">
+						</p>
+						<p class="text-center">				
+							<span>Acesse nosso canal do youtube</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<a routerLink="/pontos-de-venda">
+						<h3 class="text-center">Ponto de venda</h3>
+						<p class="text-center">
+							<img src="/assets/img/placeholder.png" alt="Videos do youtube">
+						</p>
+						<p class="text-center">				
+							<span>Sempre um ponto perto de você</span>
+						</p>
+					</a>
+				</div>
 			</div>
-			<div class="col-md-6">
-				<a routerLink="/pontos-de-venda">
-					<h3 class="text-center">Ponto de venda</h3>
-					<p class="text-center">
-						<img src="/assets/img/placeholder.png" alt="Videos do youtube">
-					</p>
-					<p class="text-center">				
-						<span>Sempre um ponto perto de você</span>
-					</p>
-				</a>
+			<div class="row">
+				<div class="col-md-6">
+					<a routerLink="/sorteio-ao-vivo">
+						<h3 class="text-center">Ao vivo</h3>
+						<p class="text-center">
+							<img src="/assets/img/play.png" alt="Videos do youtube">
+						</p>
+						<p class="text-center">				
+							<span>Assista o nosso sorteio online</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<!--<a routerLink="/publicidade">
+						<h3 class="text-center">Publicidade</h3>
+						<p class="text-center">
+							<img src="/assets/img/monitor.png" alt="Videos do youtube">
+						</p>
+						<p class="text-center">				
+							<span>Fique por dentro</span>
+						</p>
+					</a>-->
+				</div>
 			</div>
-			<a routerLink="/sorteio-ao-vivo">
-				<h3 class="text-center">Ao vivo</h3>
-				<p class="text-center">
-					<img src="/assets/img/play.png" alt="Videos do youtube">
-				</p>
-				<p class="text-center">				
-					<span>Assista o nosso sorteio online</span>
-				</p>
-			</a>
 		</div>
 
 	</div>

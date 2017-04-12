@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-inlive',
   templateUrl: './inlive.component.html',
   styleUrls: ['./inlive.component.css']
 })
-export class InliveComponent implements OnInit {
+export class InliveComponent  {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
