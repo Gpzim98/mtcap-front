@@ -10,13 +10,15 @@
       <div class="panel-heading">Confira o resultado de cada prêmio e seus ganhadores</div>
       <div class="panel-body">
           <div *ngFor="let prize of sortition?.prizes" class="premio">
-              <h4>
+              <h4 class="sortition">
                 <strong>{{ prize.order }}º Prêmio:</strong> 
                 {{ prize.description }}
               </h4>
 
               <img src="{{ prize.image }}" alt="{{ prize.description }}" 
                 class="img-responsive" *ngIf="prize.image" >
+                <hr>
+              <h4>Bolas sorteadas</h4>
               <div *ngFor="let ball of prize?.result?.bolls"  class="bola">
                   {{ ball }}
               </div>
@@ -30,3 +32,19 @@
           </div>
       </div>
   </div>
+
+  <h3>Giro da sorte</h3>
+<div class="row">
+  <div *ngFor="let lt of sortition?.luckytwist" class="col-xm-12 col-sm-12 col-md-4 col-lg-4">
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Ganhador: </strong>{{ lt.person }}</div>
+            <div class="panel-body">
+                <p> <strong>Cidade: </strong>{{ lt.person_city }}</p>
+                <p> <strong>Código:</strong>{{ lt.ticket_number }}</p>
+                <p> <strong>Vendedor:</strong>{{ lt.salesman }}</p>
+            </div>
+    </div>
+
+  </div>
+</div>
