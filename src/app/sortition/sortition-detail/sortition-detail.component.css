@@ -1,0 +1,47 @@
+.ball {
+	width: 3em;
+	height: 3em;	
+    border-radius: 150px;
+	background-color: #e01e25;
+	background-image: radial-gradient(circle 400px at 0 0, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,.8)), radial-gradient(circle 180px at 90px 80px, rgba(255,255,255,.7), rgba(0,0,0,0));
+	background-repeat: no-repeat, no-repeat;
+	
+	position:relative;
+	}
+.ball:after {
+	content: "";
+	z-index: -1;
+	top: 220px; left: 150px;
+	position: absolute;
+	background-color: black;
+	border-radius: 280px 60px;
+	width: 150px;
+	height: 80px;
+	box-shadow: 1px 0 1px black;
+	opacity: .8;
+	}
+
+.bola {
+    width: 44px;
+    display: block;
+    float: left;
+    padding: 4px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "DIN Bold";
+    color: #FFF;
+    background: url(../assets/img/bolinha.png) no-repeat center center;
+}
+
+.premio {
+    width: 100%;
+    float: left;
+}
+
+.prize-info-adict {
+    clear: both;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px;
+}

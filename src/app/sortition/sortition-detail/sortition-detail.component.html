@@ -1,4 +1,32 @@
-<p>
-  {{ id }}
-  sortition-detail works!
-</p>
+  <div class="sortition">
+    {{sortition?.edition_number}}ª Edição -	{{sortition?.sortition_date| date: 'dd/MM/yyyy'}}
+  </div>
+
+  <img src="{{sortition?.banner}}" *ngIf="sortition?.banner" 
+    alt="{{ sortition?.edition_number }}" width="100%">
+
+  <h3>Prêmios</h3>
+  <div class="panel panel-default">
+      <div class="panel-heading">Confira o resultado de cada prêmio e seus ganhadores</div>
+      <div class="panel-body">
+          <div *ngFor="let prize of sortition?.prizes" class="premio">
+              <h4>
+                <strong>{{ prize.order }}º Prêmio:</strong> 
+                {{ prize.description }}
+              </h4>
+
+              <img src="{{ prize.image }}" alt="{{ prize.description }}" 
+                class="img-responsive" *ngIf="prize.image" >
+              <div *ngFor="let ball of prize?.result?.bolls"  class="bola">
+                  {{ ball }}
+              </div>
+
+              <div class="prize-info-adict">
+                      <p><strong>Ganhador:</strong> {{ prize?.result?.winner_set[0].person }}</p>
+                      <p><strong>Endereço:</strong> {{ prize?.result?.winner_set[0].person_address }}</p>
+                      <p><strong>Código:</strong> {{ prize?.result?.winner_set[0].ticket_number }}</p>
+                      <p><strong>Vendedor:</strong> {{ prize?.result?.winner_set[0].salesman }}</p>
+              </div>
+          </div>
+      </div>
+  </div>

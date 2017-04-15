@@ -9,7 +9,7 @@ export class ContactService {
   constructor(public http: Http) { }
 
     sendContact(contact) {
-        let url = 'http://mtcap.herokuapp.com/api/contact/';
+        let url = 'https://mtcap.herokuapp.com/api/contact/';
         let autorization: any =  { Authorization: 'Token 69d9c0bfad11b362e85481f5023930f651026580' }
 
         return this.http.post(

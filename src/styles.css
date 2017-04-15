@@ -4,7 +4,6 @@ body {
 }
 
 .content {
-    margin: 10px 0 10px 0;
     background-image: url('/assets/img/bg-topo-menu.png');
     padding: 40px;
     min-height: 300px;
@@ -17,4 +16,13 @@ body {
 #navbar-topo .navbar-nav li>a {
     font-weight: bold;
     color: #000;
+}
+
+.sortition {
+    background-color: #c42b30;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
 }

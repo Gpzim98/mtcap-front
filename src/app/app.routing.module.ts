@@ -1,6 +1,5 @@
 import { InliveComponent } from './inlive/inlive.component';
 import { ContactComponent } from './contact/contact.component';
-import { ResultsComponent } from './results/results.component';
 import { NextSortitionComponent } from './next-sortition/next-sortition.component';
 import { BeneficiaryInstitutionComponent } from './beneficiary-institution/beneficiary-institution.component';
 import { NgModule} from '@angular/core';
@@ -23,7 +22,7 @@ const appRoutes: Routes = [
   { path: 'condicoes', component: ConditionsComponent },
   { path: 'instituicao-beneficiada', component: BeneficiaryInstitutionComponent },
   { path: 'proximo-sorteio', component: NextSortitionComponent },
-  { path: 'resultados', component: ResultsComponent },
+  { path: 'resultados', component: SortitionComponent },
   { path: 'contato', component: ContactComponent },
   { path: 'pontos-de-venda', component: SellingPointComponent },
   { path: 'sorteio-ao-vivo', component: InliveComponent },

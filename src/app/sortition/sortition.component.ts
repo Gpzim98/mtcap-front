@@ -1,5 +1,5 @@
+import { SortitionService } from './sortition.service';
 import { Component, OnInit } from '@angular/core';
-import {SortitionServiceComponent} from "./sortition-service/sortition-service.component";
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,15 +11,24 @@ export class SortitionComponent implements OnInit {
 
   sortitions: any[];
 
-  constructor(public sortitionService: SortitionServiceComponent,
+  constructor(public sortitionService: SortitionService,
     public router: Router
   ) { }
 
   ngOnInit() {
-    this.sortitions = this.sortitionService.getSortitions();
+    this.loadLatestSortition();
   }
 
-  redirect(){
+  loadLatestSortition() {
+      this.sortitionService.getSortitionList().subscribe(
+          data => {
+              this.sortitions = data.results;
+      },
+      error => console.log('Erro getNextSortition ' + error),
+    );
+  }
+
+  redirect() {
     console.log('foi');
     this.router.navigate(['']);
   }

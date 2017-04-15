@@ -1,13 +1,24 @@
-<router-outlet></router-outlet>
 
-<p>
-  sortition works!
-</p>
+<div class="row content">
 
-<ul>
-  <li *ngFor="let sortition of sortitions">
-    <a [routerLink]="['/sorteios', sortition.id]"> {{ sortition.edition }}</a>
-  </li>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">Últimos sorteios</div>
+        <table class="table">
+          <tr *ngFor="let sortition of sortitions" >
+            <td><a [routerLink]="['/resultados', sortition.id]">
+              {{ sortition.edition_number }}º Edição</a>
+            </td>
+            <td><a [routerLink]="['/resultados', sortition.id]">
+              {{ sortition.sortition_date }}</a>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </div>
 
-  <button (click)="redirect()">Navegar</button>
-</ul>
+  <div class="col-sm-8">
+      <router-outlet></router-outlet>
+  </div>
+
+</div>

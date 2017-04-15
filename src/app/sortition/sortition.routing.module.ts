@@ -6,7 +6,7 @@ import { SortitionDetailComponent } from './sortition-detail/sortition-detail.co
 
 
 const SortitionRoutes = [
-  { path: 'sorteios', component: SortitionComponent, children: [
+  { path: 'resultados', component: SortitionComponent, children: [
         { path: ':id', component: SortitionDetailComponent },
   ]},
 ];

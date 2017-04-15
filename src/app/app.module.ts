@@ -17,7 +17,6 @@ import { ConditionsComponent } from './conditions/conditions.component';
 import { RegulationsComponent } from './regulations/regulations.component';
 import { PublicityComponent } from './publicity/publicity.component';
 import { NextSortitionComponent } from './next-sortition/next-sortition.component';
-import { ResultsComponent } from './results/results.component';
 import { ContactComponent } from './contact/contact.component';
 import { BannersService } from './home/banners/banners.service';
 import { FooterService } from './footer/footer.service';
@@ -42,7 +41,6 @@ import { TitleCapitalizationComponent } from './title-capitalization/title-capit
     RegulationsComponent,
     PublicityComponent,
     NextSortitionComponent,
-    ResultsComponent,
     ContactComponent,
     SellingPointComponent,
     InliveComponent,

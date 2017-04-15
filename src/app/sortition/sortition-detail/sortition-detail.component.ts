@@ -1,7 +1,6 @@
+import { SortitionService } from './../sortition.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
-
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -12,19 +11,24 @@ import { Subscription } from 'rxjs/Rx';
 export class SortitionDetailComponent implements OnInit, OnDestroy {
   public id: string;
   public subscription: Subscription;
+  sortition: any;
 
-    constructor(private route: ActivatedRoute) {
+    constructor(private route: ActivatedRoute,
+        public sortitionService: SortitionService) {
     }
 
     ngOnInit() {
         this.subscription = this.route.params.subscribe(
             (params: any) => {
-                this.id = params['id'];
+                this.sortitionService.getSortitions(params['id']).subscribe(
+                    (data) => {
+                        this.sortition = data;
+                    });
             }
         );
     }
 
-    ngOnDestroy(){
+    ngOnDestroy() {
       this.subscription.unsubscribe();
     }
 }
