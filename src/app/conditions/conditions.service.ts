@@ -4,12 +4,12 @@ import 'rxjs/add/operator/map';
 
 
 @Injectable()
-export class AboutUsService {
+export class ConditionsService {
 
   constructor(public http: Http) { }
 
-    getAboutUsContent() {
-        let url = 'https://mtcap.herokuapp.com/api/pages/?search=SE';
+    getConditionsContent() {
+        let url = 'https://mtcap.herokuapp.com/api/pages/?search=CD';
         return this.http.get(url)
             .map(res => res.json());
     }

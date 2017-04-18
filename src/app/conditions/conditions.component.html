@@ -1,9 +1,6 @@
 <div class="row content">
-  <h1 text-center>Condições e regulamento</h1>
 
-<h2 text-center>Para ler o regulamento, clique no botão abaixo.</h2>
+  <h1 [innerHTML]="content?.title"></h1>
 
-<a href="http://download.mtcap.com.br/arquivos/regulamento1/REGULAMENTO%20GERAL%20DO%20RECIBO%20DE%20CONTRIBUICAO.pdf" 
-  target="_blank"  class="btn btn-info">Regulamentos</a>
-
+  <div [innerHTML]="content?.content"> </div>
 </div>

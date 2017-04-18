@@ -1,3 +1,4 @@
+import { BeneficiaryInstitutionService } from './beneficiary-institution.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeneficiaryInstitutionComponent implements OnInit {
 
-  constructor() { }
+  public content: any;
+
+  constructor(public benefInstitution: BeneficiaryInstitutionService) { }
 
   ngOnInit() {
+    this.loadBenefInstitutionContent();
+  }
+
+  loadBenefInstitutionContent() {
+      this.benefInstitution.getBenefInstitutionContent().subscribe(
+          data => {
+              this.content = data[0];
+      },
+      error => console.log('Erro getConditionsContent ' + error),
+    );
   }
 
 }

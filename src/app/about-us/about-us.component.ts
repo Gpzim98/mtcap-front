@@ -20,7 +20,7 @@ export class AboutUsComponent implements OnInit {
           data => {
               this.content = data[0];
       },
-      error => console.log('Erro getNextSortition ' + error),
+      error => console.log('Erro getAboutUsContent ' + error),
     );
   }
 }

@@ -1,14 +1,8 @@
 <div class="row content">
-  <h1>Instituição Beneficiada</h1>
-  <h2>Hospital do Cancer - Instituição Beneficiada MTCAP</h2>
 
-<img src="/assets/img/hospital-cancer-logo.png" alt="Hospital do cancer">
-<p>
-  O Hospital de Câncer de Mato Grosso, desde 1999, atende a demanda de pacientes com forte suspeita ou diagnóstico de câncer e oferece serviço resolutivo de qualidade nos diversos níveis de complexidade, priorizando o atendimento multiprofissional. A grande maioria dos pacientes (97%) é atendida por meio do Sistema Único de Saúde (SUS), sendo que somente em 2013, foram realizados cerca de 60 mil atendimentos.
+  <h1 [innerHTML]="content?.name"></h1>
 
-  Atualmente o hospital é referência no tratamento de câncer em Mato Grosso. Foi considerado como porte “A” entre os Centros de Alta Complexidade em Oncologia (Cacons) do país, de acordo com a portaria nº 2947, publicada em dezembro de 2012 pelo Ministério da Saúde. A instituição dispõe de alta tecnologia, tanto na área de diagnóstico como de tratamento e oferece atendimento em praticamente todas as especialidades da oncologia. Possui 126 leitos, divididos entre enfermaria de clínica médica, cirúrgica, pediátrica e UTI. Além disso, está capacitado para a realização de cirurgias de pequeno, médio e grande porte em diversas áreas.
+  <img [src]="content?.logo" alt="{{content?.name}}">
 
-  Por ser uma instituição privada e filantrópica, o hospital depende de parcerias e do apoio para manter seu funcionamento. É uma luta diária para fazer o bem em prol daqueles que mais precisam. Os gastos para manter a instituição circulam na casa dos R$ 2,5 milhões de reais mensais. Infelizmente, os recursos recebidos não são suficientes e o déficit chega a R$600 mil reais por mês. O Hospital de Câncer de Mato Grosso busca, por meio de suas ações, mobilizar a sociedade para esta causa, na tentativa de realizar um sonho: garantir um atendimento totalmente humanizado no combate ao câncer. Muitos dos projetos que o Hospital de Câncer possui, estão à espera de parcerias e doações para serem colocados em prática.
-</p>
-
+  <div [innerHTML]="content?.content"> </div>
 </div>
