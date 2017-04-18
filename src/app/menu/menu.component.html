@@ -1,4 +1,18 @@
-<div class="row" id="menu-top">
+<script>
+  $('#menu-top').affix({
+      offset: {
+        top: $('header').height()
+      }
+});	
+
+$('#sidebar').affix({
+      offset: {
+        top: 200
+      }
+});	
+</script>
+
+<div class="row" id="menu-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
   <nav class="navbar navbar-default" id="navbar-topo">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,13 +22,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
+        </button> 
         <a class="navbar-brand visible-xs" href="#">Menu</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" id="sidebar">
           <li><a routerLink="">HOME <span class="sr-only">(current)</span></a></li>
           <li><a routerLink="/sobre-nos">SOBRE</a></li>
           <li><a routerLink="/instituicao-beneficiada">INSTITUIÇÃO BENEFICIADA</a></li>

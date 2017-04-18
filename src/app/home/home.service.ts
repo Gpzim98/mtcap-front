@@ -9,7 +9,7 @@ export class HomeService {
   constructor(public http: Http) { }
 
     getNextSortition() {
-        let url = 'https://mtcap.herokuapp.com/api/sortitions/?search=true';
+        let url = 'https://mtcap.herokuapp.com/api/sortitions/?format=json&search=true';
         return this.http.get(url)
             .map(res => res.json());
     }

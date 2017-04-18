@@ -1,5 +1,5 @@
 import { SortitionService } from './../sortition.service';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs/Rx';
 export class SortitionDetailComponent implements OnInit, OnDestroy {
   public id: string;
   public subscription: Subscription;
-  sortition: any;
+  @Input() sortition: any;
 
     constructor(private route: ActivatedRoute,
         public sortitionService: SortitionService) {

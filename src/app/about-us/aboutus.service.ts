@@ -4,14 +4,14 @@ import 'rxjs/add/operator/map';
 
 
 @Injectable()
-export class FooterService {
+export class AboutUsService {
 
   constructor(public http: Http) { }
 
-    getLatestSortition(){
-        let url = 'https://mtcap.herokuapp.com/api/sortitions/?limit=10';
-        // let url = 'http://localhost:8000/api/sortitions/?limit=10';
+    getAboutUsContent() {
+        let url = 'http://localhost:8000/api/pages/?search=SE';
         return this.http.get(url)
             .map(res => res.json());
     }
+
 }

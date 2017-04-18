@@ -19,7 +19,7 @@ export class NextSortitionComponent implements OnInit {
   loadNextSortition() {
       this.homeService.getNextSortition().subscribe(
           data => {
-              this.nextSortition = data.results[0];
+              this.nextSortition = data[0];
       },
       error => console.log('Erro getNextSortition ' + error),
     );

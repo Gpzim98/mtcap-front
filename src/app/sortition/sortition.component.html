@@ -1,9 +1,10 @@
 
 <div class="row content">
 
+<h2 hidden>Resultados dos últimos sorteios MTCAP</h2>
   <div class="col-sm-4">
     <div class="panel panel-default">
-        <div class="panel-heading">Últimos sorteios</div>
+        <div class="panel-heading"><h1>Últimos sorteios</h1></div>
         <table class="table">
           <tr *ngFor="let sortition of sortitions" >
             <td><a [routerLink]="['/resultados', sortition.id]">

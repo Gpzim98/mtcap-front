@@ -27,7 +27,7 @@
         <h3>Últimos Sorteios</h3>
         <ul>
           <li *ngFor="let sortition of latestSortitions">
-              <a routerLink="{{ sortition.id }}">{{ sortition.edition_number }}ª Edição | {{ sortition.sortition_date | date}}</a>
+              <a [routerLink]="['/resultados', sortition.id]">{{ sortition.edition_number }}ª Edição | {{ sortition.sortition_date | date}}</a>
           </li>
         </ul>              
     </div>
