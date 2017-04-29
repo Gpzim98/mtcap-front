@@ -1,4 +1,6 @@
+import { FacebookInLiveLinkService } from './facebook-in-live-link.service';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-inlive',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./inlive.component.css']
 })
 export class InliveComponent  {
+    public facebookLink = '';
 
-  constructor() { }
+    constructor(public faceLinkService: FacebookInLiveLinkService) { 
+        this.loadFacebookInLineLink();
+    }
+
+    loadFacebookInLineLink() {
+        this.faceLinkService.getFacebookInLineLink().subscribe(
+            data => {
+                this.facebookLink = data[0].link;
+        },
+        error => console.log('Erro loadFacebookInLineLink ' + error),
+      );
+    }
 
 }

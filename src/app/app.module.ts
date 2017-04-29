@@ -24,6 +24,7 @@ import { FooterService } from './footer/footer.service';
 import { ContactService } from './contact/contact.service';
 import { HomeService } from './home/home.service';
 import { ConditionsService } from './conditions/conditions.service';
+import { FacebookInLiveLinkService } from './inlive/facebook-in-live-link.service';
 import { SellingPointComponent } from './selling-point/selling-point.component';
 import { BeneficiaryInstitutionService } from './beneficiary-institution/beneficiary-institution.service';
 import { InliveComponent } from './inlive/inlive.component';
@@ -58,7 +59,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     SortitionModule,
   ],
-  providers: [ BannersService, HomeService, FooterService,
+  providers: [ BannersService, HomeService, FooterService, FacebookInLiveLinkService,
     ContactService, AboutUsService, ConditionsService, BeneficiaryInstitutionService ],
   bootstrap: [AppComponent]
 })

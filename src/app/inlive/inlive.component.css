@@ -1,3 +1,8 @@
 #aovivo object html {
     overflow: hidden;
 }
+
+.video {
+    float: left;
+    text-align: center;
+}
