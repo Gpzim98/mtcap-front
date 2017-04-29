@@ -20,7 +20,6 @@ export class ConditionsComponent implements OnInit {
       this.conditionsService.getConditionsContent().subscribe(
           data => {
               this.content = data[0];
-              console.log(this.content);
       },
       error => console.log('Erro getConditionsContent ' + error),
     );

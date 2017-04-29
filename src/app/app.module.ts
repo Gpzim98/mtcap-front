@@ -28,6 +28,7 @@ import { SellingPointComponent } from './selling-point/selling-point.component';
 import { BeneficiaryInstitutionService } from './beneficiary-institution/beneficiary-institution.service';
 import { InliveComponent } from './inlive/inlive.component';
 import { TitleCapitalizationComponent } from './title-capitalization/title-capitalization.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { TitleCapitalizationComponent } from './title-capitalization/title-capit
     SellingPointComponent,
     InliveComponent,
     TitleCapitalizationComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

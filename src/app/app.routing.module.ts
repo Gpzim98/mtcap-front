@@ -12,6 +12,7 @@ import { SortitionComponent } from './sortition/sortition.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SellingPointComponent } from './selling-point/selling-point.component';
 import { TitleCapitalizationComponent } from './title-capitalization/title-capitalization.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +28,9 @@ const appRoutes: Routes = [
   { path: 'pontos-de-venda', component: SellingPointComponent },
   { path: 'sorteio-ao-vivo', component: InliveComponent },
   { path: 'titulo-capitalizacao', component: TitleCapitalizationComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' },
+  // { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' },
+  {path: '404', component: NotFoundComponent},
+  {path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({
