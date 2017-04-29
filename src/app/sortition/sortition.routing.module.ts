@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './../not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,8 @@ const SortitionRoutes = [
   { path: 'resultados', component: SortitionComponent, children: [
         { path: ':id', component: SortitionDetailComponent },
   ]},
+  {path: '404', component: NotFoundComponent},
+  {path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({

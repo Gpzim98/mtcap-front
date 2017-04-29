@@ -23,14 +23,14 @@ export class SortitionComponent implements OnInit {
       this.sortitionService.getSortitionList().subscribe(
           data => {
               this.sortitions = data.results;
+              this.redirect();
       },
       error => console.log('Erro getNextSortition ' + error),
     );
   }
 
   redirect() {
-    console.log('foi');
-    this.router.navigate(['']);
+    this.router.navigate(['resultados/' + this.sortitions[0].id]);
   }
 
 }

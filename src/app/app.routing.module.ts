@@ -28,9 +28,9 @@ const appRoutes: Routes = [
   { path: 'pontos-de-venda', component: SellingPointComponent },
   { path: 'sorteio-ao-vivo', component: InliveComponent },
   { path: 'titulo-capitalizacao', component: TitleCapitalizationComponent },
-  // { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' },
-  {path: '404', component: NotFoundComponent},
-  {path: '**', redirectTo: '/404'},
+  { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' },
+  // {path: '404', component: NotFoundComponent},
+  // {path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({
