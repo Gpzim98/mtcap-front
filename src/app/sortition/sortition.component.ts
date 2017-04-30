@@ -22,7 +22,7 @@ export class SortitionComponent implements OnInit {
   loadLatestSortition() {
       this.sortitionService.getSortitionList().subscribe(
           data => {
-              this.sortitions = data.results;
+              this.sortitions = data;
               this.redirect();
       },
       error => console.log('Erro getNextSortition ' + error),

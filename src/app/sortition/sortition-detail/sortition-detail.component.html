@@ -5,6 +5,9 @@
   <img src="{{sortition?.banner}}" *ngIf="sortition?.banner" 
     alt="{{ sortition?.edition_number }}" width="100%">
 
+  <img src="{{sortition?.legacy_image}}" *ngIf="!sortition?.banner" 
+    alt="{{ sortition?.edition_number }}" width="100%">
+
   <h3>Prêmios</h3>
   <div class="panel panel-default">
       <div class="panel-heading">Confira o resultado de cada prêmio e seus ganhadores</div>
@@ -23,7 +26,7 @@
                   {{ ball }}
               </div>
 
-              <div class="prize-info-adict">
+              <div class="prize-info-adict" *ngIf="prize?.result?.winner_set[0]" >
                       <p><strong>Ganhador:</strong> {{ prize?.result?.winner_set[0].person }}</p>
                       <!--<img src="{{ prize?.result?.winner_set[0].person_image}}" -->
                       <img src="/assets/img/mtcap-logo.png" width="30%" 
