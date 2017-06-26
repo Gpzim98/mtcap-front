@@ -15,7 +15,7 @@
           <div *ngFor="let prize of sortition?.prizes" class="premio">
               <h4 class="sortition">
                 <strong>{{ prize.order }}º Prêmio:</strong> 
-                {{ prize.description }}
+                {{ prize.description }} - R$ {{ prize.value }}
               </h4>
 
               <img src="{{ prize.image }}" alt="{{ prize.description }}" 
@@ -28,9 +28,7 @@
 
               <div class="prize-info-adict" *ngIf="prize?.result?.winner_set[0]" >
                       <p><strong>Ganhador:</strong> {{ prize?.result?.winner_set[0].person }}</p>
-                      <!--<img src="{{ prize?.result?.winner_set[0].person_image}}" -->
-                      <img src="/assets/img/mtcap-logo.png" width="30%" 
-                        alt="{{ prize?.result?.winner_set[0].person }}">
+                      <img src="{{ prize?.result?.winner_set[0].person_image}}"> 
                       <p><strong>Endereço:</strong> {{ prize?.result?.winner_set[0].person_address }}</p>
                       <p><strong>Nº da sorte:</strong> {{ prize?.result?.winner_set[0].ticket_number }}</p>
                       <p><strong>Vendedor:</strong> {{ prize?.result?.winner_set[0].salesman }}</p>

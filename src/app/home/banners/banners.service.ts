@@ -1,3 +1,4 @@
+import { APIProvider } from './../../api-provider';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -5,10 +6,15 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BannersService{
-  url_galery = 'https://mtcap.herokuapp.com/api/galleries/?format=json&search=true';
-  url = 'https://mtcap.herokuapp.com/api/galleries/?search=true';
+  public apiProvider = new APIProvider();
+  public url: string;
+  public url_galery: string;
+  
+  constructor(public http: Http) {
+      this.url_galery = this.apiProvider.url + 'galleries/?format=json&search=true';
+      this.url = this.apiProvider.url + 'galleries/?search=true';
 
-  constructor(public http: Http) { }
+   }
 
 
     getGalleryId() {
