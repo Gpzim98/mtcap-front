@@ -1,3 +1,4 @@
+import { APIProvider } from './../api-provider';
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './../home/home.service';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -9,8 +10,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class NextSortitionComponent implements OnInit {
   nextSortition: any;
+  public apiProvider: APIProvider;
 
-  constructor(public homeService: HomeService, private sanitizer: DomSanitizer) { }
+  constructor(public homeService: HomeService, private sanitizer: DomSanitizer) {
+    this.apiProvider = new APIProvider();
+   }
 
   ngOnInit() {
       this.loadNextSortition();
@@ -19,7 +23,7 @@ export class NextSortitionComponent implements OnInit {
   loadNextSortition() {
       this.homeService.getNextSortition().subscribe(
           data => {
-              this.nextSortition = data[0];
+              this.nextSortition = data.results[0];
       },
       error => console.log('Erro getNextSortition ' + error),
     );

@@ -5,6 +5,9 @@
   <img src="{{sortition?.banner}}" *ngIf="sortition?.banner" 
     alt="{{ sortition?.edition_number }}" width="100%">
 
+  <img src="{{sortition?.legacy_image}}" *ngIf="!sortition?.banner" 
+    alt="{{ sortition?.edition_number }}" width="100%">
+
   <h3>Prêmios</h3>
   <div class="panel panel-default">
       <div class="panel-heading">Confira o resultado de cada prêmio e seus ganhadores</div>
@@ -12,7 +15,7 @@
           <div *ngFor="let prize of sortition?.prizes" class="premio">
               <h4 class="sortition">
                 <strong>{{ prize.order }}º Prêmio:</strong> 
-                {{ prize.description }}
+                {{ prize.description }} - {{ prize.value | currency:'BRL':true}}
               </h4>
 
               <img src="{{ prize.image }}" alt="{{ prize.description }}" 
@@ -22,7 +25,7 @@
               <div *ngFor="let ball of prize?.result?.bolls"  class="bola">
                   {{ ball }}
               </div>
-
+                
               <div class="prize-info-adict" *ngFor="let ganhador of prize?.result?.winner_set">
                       <p><strong>Ganhador:</strong> {{ ganhador.person }}</p>
                       <p><strong>Endereço:</strong> {{ ganhador.person_address }}</p>
