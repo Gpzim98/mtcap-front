@@ -23,11 +23,11 @@
                   {{ ball }}
               </div>
 
-              <div class="prize-info-adict">
-                      <p><strong>Ganhador:</strong> {{ prize?.result?.winner_set[0].person }}</p>
-                      <p><strong>Endereço:</strong> {{ prize?.result?.winner_set[0].person_address }}</p>
-                      <p><strong>Nº da sorte:</strong> {{ prize?.result?.winner_set[0].ticket_number }}</p>
-                      <p><strong>Vendedor:</strong> {{ prize?.result?.winner_set[0].salesman }}</p>
+              <div class="prize-info-adict" *ngFor="let ganhador of prize?.result?.winner_set">
+                      <p><strong>Ganhador:</strong> {{ ganhador.person }}</p>
+                      <p><strong>Endereço:</strong> {{ ganhador.person_address }}</p>
+                      <p><strong>Nº da sorte:</strong> {{ ganhador.ticket_number }}</p>
+                      <p><strong>Vendedor:</strong> {{ ganhador.salesman }}</p>
               </div>
           </div>
       </div>
