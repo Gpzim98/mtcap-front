@@ -1,3 +1,3 @@
 export class APIProvider{
-    url = 'http://adm.mtcap.com.br/api/';
+    url = 'https://adm.mtcap.com.br/api/';
 }

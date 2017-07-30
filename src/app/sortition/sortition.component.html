@@ -11,7 +11,7 @@
               {{ sortition.edition_number }}º Edição</a>
             </td>
             <td><a [routerLink]="['/resultados', sortition.id]">
-              {{ sortition.sortition_date | date }}</a>
+              {{ sortition.sortition_date| date: 'dd - MM - yyyy'}}</a>
             </td>
           </tr>
         </table>

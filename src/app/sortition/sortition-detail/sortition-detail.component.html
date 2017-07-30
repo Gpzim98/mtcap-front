@@ -15,7 +15,7 @@
           <div *ngFor="let prize of sortition?.prizes" class="premio">
               <h4 class="sortition">
                 <strong>{{ prize.order }}º Prêmio:</strong> 
-                {{ prize.description }} - R$ {{ prize.value }}
+                {{ prize.description }} - {{ prize.value | currency:'BRL':true}}
               </h4>
 
               <img src="{{ prize.image }}" alt="{{ prize.description }}" 
